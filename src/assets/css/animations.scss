@@ -1,0 +1,77 @@
+@import './variables.scss';
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 1;
+    width: 0%;
+    overflow: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fall {
+
+
+  0% {
+    transform: rotate(0turn) translateY(0px);
+  }
+
+  20% {
+    transform: rotate(0.03turn) translateY(7px);
+  }
+
+  30% {
+    transform: rotate(0.01turn) translateY(5px);
+  }
+
+  45% {
+    transform: rotate(0.03turn) translateY(7px);
+  }
+
+  60% {
+    transform: rotate(0.02turn) translateY(5px);
+  }
+
+  100% {
+    transform: rotate(0.03turn) translateY(8px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: $primary-color;
+  }
+}

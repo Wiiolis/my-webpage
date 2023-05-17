@@ -1,0 +1,287 @@
+@import '../../assets/css/variables';
+
+.header_bg {
+  background-color: #1f2224;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_text {
+    max-width: 900px;
+    margin: 0 auto;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 100px;
+
+    h1 {
+      font-weight: normal;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .animation_slide {
+      opacity: 0;
+      animation: 100ms ease-in-out 0s 1 opacity forwards;
+      text-align: left;
+
+      &:nth-child(1) {
+        animation-delay: 1700ms;
+        animation-duration: 1.5s;
+        margin-bottom: 10px;
+
+      }
+
+      &:nth-child(2) {
+        animation-delay: 1900ms;
+        animation-duration: 1.5s;
+        margin-bottom: -20px;
+
+      }
+
+      &:nth-child(4) {
+        animation-delay: 2100ms;
+        animation-duration: 1.5s;
+        margin-top: 10px;
+      }
+    }
+
+    &_hello {
+      white-space: nowrap;
+      font-size: 35px;
+      color: $primary-darker;
+      padding-bottom: 5px;
+    }
+
+    &_codeArt {
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      padding-bottom: 25px;
+
+      overflow-y: visible;
+      overflow-x: clip;
+      border-right: .05em solid $primary-color;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .05em;
+      animation:
+        typing 2s steps(17, end),
+        blink-caret .75s step-end infinite;
+    }
+
+    &_code {
+      color: $secondary-color;
+      display: inline-block;
+      cursor: pointer;
+      transition: 0.3s ease all;
+
+      &:hover {
+        transform: scale(1.05);
+        text-shadow: 0 0 5px #fff, 0 0 4px $secondary-color, 0 0 6px #fc90de, 0 0 8px #fc90de;
+      }
+    }
+
+    &_art {
+      color: $primary-lighter;
+      display: inline-block;
+      transition: 0.1s ease all;
+      cursor: pointer;
+
+      &:hover {
+        animation: 1200ms ease 0s 1 fall forwards;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: $primary-darker;
+    }
+  }
+
+  &_buttons {
+    max-width: 900px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    animation: 1500ms ease-in-out 0s 1 opacity forwards;
+    animation-delay: 2400ms;
+    opacity: 0;
+  }
+
+
+  &_links {
+    flex: none;
+    padding: 40px 0;
+    display: flex;
+
+
+
+    &_link {
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      box-shadow: inset 2px 2px 1px 1px #00000056, 1px 1px 1px #00000027;
+      cursor: pointer;
+      border: 2px solid $secondary-color;
+      background-position: center;
+      background-size: 100%;
+      transition: 0.3s ease all;
+      overflow: hidden;
+      position: relative;
+      transition: 0.5s ease all;
+
+      &:hover {
+        background-size: 90%;
+        box-shadow: inset 2px 2px 2px 2px #00000056, 1px 1px 1px #00000027;
+        filter: brightness(0.95);
+
+        .gate-left {
+          margin-left: -20px;
+        }
+
+        .gate-right {
+          margin-right: -20px;
+        }
+      }
+
+      .gate-left {
+        background-color: $primary-color;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        transition: 0.5s ease all;
+        opacity: 0.5;
+      }
+
+      .gate-right {
+        background-color: $primary-color;
+        width: 50%;
+        height: 100%;
+        transition: 0.5s ease all;
+        position: absolute;
+        right: 0;
+        opacity: 0.5;
+      }
+
+      .linkedin {
+        background-image: url("../../assets/images/linkedin.png");
+        background-size: 100%;
+        height: 40px;
+        width: 40px;
+      }
+
+      .twitter {
+        background-image: url("../../assets/images/twitter.jpeg");
+        background-size: 130%;
+        background-position: center;
+        height: 40px;
+        width: 40px;
+      }
+
+      .artstation {
+        background-image: url("../../assets/images/at.jpeg");
+        background-size: 100%;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    &_line {
+      border-bottom: 2px solid $primary-color;
+      width: 80%;
+    }
+
+    span {
+      padding-left: 20px;
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  a {
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    background: $light-text;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid $light-text;
+    transition: all .35s;
+  }
+}
+
+.header_buttons_code {
+  a {
+    background: $dark-color;
+    color: $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $dark-color;
+    }
+  }
+}
+
+.header_buttons_art {
+  a {
+    background: $primary-color;
+    color: $dark-color;
+
+    &:hover {
+      background: transparent;
+      color: $light-text;
+    }
+  }
+}
+
+.header_buttons_art,
+.header_buttons_code {
+  position: relative;
+
+  a:hover {
+    width: 170px;
+    border: 2px solid $light-text;
+    font-weight: bold;
+  }
+
+  a:hover+.icon {
+    left: calc(50% - 15px);
+    top: 35px;
+    background-color: $primary-color;
+  }
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  left: calc(50% - 15px);
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(45deg);
+  fill: white;
+  transition: all .35s;
+}

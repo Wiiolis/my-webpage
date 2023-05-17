@@ -1,0 +1,42 @@
+@import 'src/assets/css/variables.scss';
+
+
+.about {
+  max-width: 550px;
+  margin: 100px auto 0;
+
+  h1 {
+    font-size: 112px;
+    margin-left: -10px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 10px;
+    line-height: 130px;
+    background-image: linear-gradient(to right, $primary-color 35%, $secondary-color, $secondary-color);
+    color: transparent;
+    background-clip: text;
+
+    span {
+      color: $secondary-color;
+      display: inline-block;
+      transform: rotate(20deg) translateY(35px);
+    }
+  }
+
+  &_text {
+    max-width: 350px;
+    line-height: 140%;
+    text-align: justify;
+    hyphens: auto;
+    background-image: linear-gradient(to right, $primary-color 75%, $secondary-color);
+    color: transparent;
+    background-clip: text;
+  }
+
+  .divider {
+    border-bottom: 2px solid $secondary-color;
+    transform: rotate(6deg) translateY(35px);
+    max-width: 550px;
+    margin: 30px auto;
+  }
+}

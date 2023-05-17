@@ -1,0 +1,57 @@
+@import 'src/assets/css/variables.scss';
+
+.contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  margin: 150px auto;
+
+  h1 {
+    font-size: 100px;
+    line-height: 130px;
+    font-weight: normal;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    div {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+
+      input[type=email] {
+        flex: 1;
+        padding: 5px;
+        color: $secondary-color;
+        font-size: 16px;
+      }
+
+      input[type=submit] {
+        width: 130px;
+        background-color: $secondary-color;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease all;
+
+        &:hover {
+          background-color: darken($color: $secondary-color, $amount: 3);
+        }
+      }
+    }
+
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 5px;
+      color: $secondary-color;
+      font-size: 16px;
+    }
+  }
+}
